@@ -1,0 +1,6 @@
+---
+- name: Ansible playbook to for Google Cloud Virtual Machine setup
+  hosts: all
+  remote_user: rahulwagh
+  roles:
+    - jhooq

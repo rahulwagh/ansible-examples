@@ -1,0 +1,29 @@
+---
+- name: installing packages for python env
+  become: yes
+  apt:
+    name:
+      - python3-pip
+      - git
+    update_cache: yes
+
+- name: Creates directory
+  file:
+    path: ./basic-http-server
+    state: directory
+
+- name: Read-write git checkout from github
+  ansible.builtin.git:
+    repo: https://github.com/rahulwagh/python-example.git
+    dest: ./basic-http-server
+
+- name: Run the hugo command locally
+  connection: local
+  shell: "pwd"
+  register: localPath
+
+- debug:
+    msg: "{{ localPath.stdout }}"
+
+- name: Execute the script
+  command: nohup python3 /home/rahulwagh/basic-http-server/basic-http-server/app.py &

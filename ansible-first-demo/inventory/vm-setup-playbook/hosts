@@ -1,0 +1,2 @@
+[gcp-host]
+34.147.94.189 ansible_ssh_private_key_file=/Users/rahulwagh/.ssh/aws_ec2_terraform

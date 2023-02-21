@@ -1,0 +1,19 @@
+---
+- name: Example Ansible playbook for Handlers
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+  roles:
+    - handlers
+
+  # Single Handlers
+#  handlers:
+#    - name: Restart Apache2
+#      become: yes
+#      service: name=apache2 state=restarted
+
+  handlers:
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted

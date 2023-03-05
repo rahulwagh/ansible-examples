@@ -10,7 +10,8 @@
   notify:
     - Restart Nginx
 
-- name: test.html copy
-  template: src=test.html dest=/usr/share/nginx/html/index.html
+## Update the content on the website
+- name: updated.html copy
+  template: src=updated.html dest=/usr/share/nginx/html/index.html
   notify:
     - Restart Nginx

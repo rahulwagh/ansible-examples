@@ -7,8 +7,6 @@
 
 - name: index.html copy
   template: src=index.html dest=/usr/share/nginx/html/index.html
-  notify:
-    - Restart Nginx
 
 ## Update the content on the website
 - name: updated.html copy

@@ -1,0 +1,70 @@
+---
+- name: Example Ansible playbook for Handlers
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+  roles:
+    - custom-role
+
+  environment:
+    EXAMPLE: "Foo bar"
+    MY_VAR1: "variable value1"
+
+  tasks:
+    # Environment variable at Playbook Level
+    - name: Environment var at Playbook Level
+      ansible.builtin.command: "echo $EXAMPLE"
+
+    # Environment variable only for tasks
+    - name: Environment var for only task Level
+      environment:
+        MY_TASK_LEVEL_VARIABLE: "Hello World!"
+      ansible.builtin.command: "echo $MY_TASK_LEVEL_VARIABLE"
+
+    #Testing Environment variable
+    - name: Testing both playbook level as well as environment level vars.
+      ansible.builtin.command: "echo $EXAMPLE $MY_TASK_LEVEL_VARIABLE "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

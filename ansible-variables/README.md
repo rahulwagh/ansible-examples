@@ -15,3 +15,8 @@ ansible-playbook --inventory inventory/ansible-variable-playbook/hosts ansible-v
 ```bash
 ansible-playbook --inventory inventory/ansible-variable-playbook/hosts ansible-variables-playbook.yml --extra-vars "@my-vars.yml"
 ```
+
+```bash
+ansible-playbook playbook.yml 
+--extra-vars '{"version":"1.0"}' 
+```

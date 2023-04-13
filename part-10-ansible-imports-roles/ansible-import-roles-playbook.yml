@@ -1,0 +1,52 @@
+---
+- name: Example Ansible playbook for Handlers
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+  roles:
+    - custom-role
+    - install-apache
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,8 +4,25 @@
   become: yes
   remote_user: ubuntu
   roles:
-    - custom-role
+    - install-lighttpd
     - install-apache
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

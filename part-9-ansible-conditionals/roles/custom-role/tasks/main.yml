@@ -6,15 +6,6 @@
     state: absent
   when: install_apache_flag
 
-## Conditionals based on ansible_facts
-- name: How to use ansible_facts
-  debug:
-    var: ansible_facts['distribution']
-    #var: ansible_facts['distribution_major_version']
-    #var: ansible_facts['kernel_version']
-    #var: ansible_facts
-  when: ansible_facts['os_family'] == "Debian"
-
 ## Putting multiple condition using ansible_facts
 - name: Combine conditions using ansible facts
   debug:
@@ -44,3 +35,12 @@
   ansible.builtin.command: echo {{ item }}
   loop: [ 0, 2, 4, 6, 8, 10 ]
   when: item > 5
+
+## Conditionals based on ansible_facts
+- name: How to use ansible_facts
+  debug:
+    var: ansible_facts['distribution']
+    #var: ansible_facts['distribution_major_version']
+    #var: ansible_facts['kernel_version']
+    #var: ansible_facts
+  when: ansible_facts['os_family'] == "Debian"

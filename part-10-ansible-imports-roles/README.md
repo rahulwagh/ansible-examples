@@ -15,5 +15,5 @@ type -a apache2
 ## SSH to EC2 instance
 
 ```
-ssh -i /Users/rahulwagh/.ssh/aws_ec2_terraform ubuntu@ec2-3-69-241-84.eu-central-1.compute.amazonaws.com
+ssh -i /Users/rahulwagh/.ssh/aws_ec2_terraform ubuntu@ec2-3-74-153-166.eu-central-1.compute.amazonaws.com
 ```

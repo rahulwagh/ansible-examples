@@ -1,0 +1,9 @@
+---
+## Clone the private repo on remote server
+- name: Clone a private Git repository
+  git:
+    repo: git@github.com:rahulwagh/jhooq.git
+    dest: /home/ubuntu/jhooq-repo
+    accept_hostkey: yes
+    key_file: /home/ubuntu/.ssh/id_rsa
+

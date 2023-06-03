@@ -1,0 +1,11 @@
+[blue]
+# Server-1
+52.59.205.47 ansible_ssh_private_key_file=/Users/rahulwagh/.ssh/aws_ec2_terraform
+# Server-2
+18.194.203.12 ansible_ssh_private_key_file=/Users/rahulwagh/.ssh/aws_ec2_terraform
+
+[green]
+# Server-3
+3.75.236.253 ansible_ssh_private_key_file=/Users/rahulwagh/.ssh/aws_ec2_terraform
+# Server-4
+3.123.154.105 ansible_ssh_private_key_file=/Users/rahulwagh/.ssh/aws_ec2_terraform

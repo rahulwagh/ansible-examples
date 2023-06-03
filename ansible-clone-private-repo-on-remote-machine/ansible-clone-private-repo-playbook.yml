@@ -4,8 +4,7 @@
   become: yes
   remote_user: ubuntu
   roles:
-    - install-lighttpd
-    #- install-apache
+    - clone-private-repo
 
 
 

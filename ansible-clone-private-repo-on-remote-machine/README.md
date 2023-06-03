@@ -1,7 +1,7 @@
 ## Run playbook
 
 ```bash
-ansible-playbook --inventory inventory/ansible-conditionals-playbook/hosts ansible-conditionals-playbook.yml
+ansible-playbook --inventory inventory/ansible-clone-private-repo-playbook/hosts ansible-clone-private-repo-playbook.yml
 ```
 
 

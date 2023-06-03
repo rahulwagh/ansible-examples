@@ -1,0 +1,9 @@
+---
+- name: installing packages for python env
+  become: yes
+  apt:
+    name:
+      - python3-pip
+    update_cache: yes
+
+

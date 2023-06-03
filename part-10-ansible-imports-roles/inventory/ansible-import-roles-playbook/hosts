@@ -1,2 +1,2 @@
-[default]
-ec2-3-72-2-115.eu-central-1.compute.amazonaws.com ansible_ssh_private_key_file=/Users/rahulwagh/.ssh/aws_ec2_terraform
+[aws]
+ec2-3-74-153-166.eu-central-1.compute.amazonaws.com ansible_ssh_private_key_file=/Users/rahulwagh/.ssh/aws_ec2_terraform

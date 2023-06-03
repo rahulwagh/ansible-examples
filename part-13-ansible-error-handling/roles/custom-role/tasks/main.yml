@@ -1,0 +1,26 @@
+---
+# 1. ignore_errors - Ignoring the error
+- name: index.html copy with ignore_error
+  template: src=index.html dest=/home/ubuntu
+  register: copy_result
+  ignore_errors: true
+
+- name: String Variable from - main_playbook_variable
+  debug:
+    var: copy_result
+
+
+# 2. any_errors_fatal
+- name: index.html copy with failed_when
+  template: src=index.html dest=/home/ubuntu
+  failed_when:
+    - '"Could not find or access" not in copy_result.msg'
+    - copy_result.failed == true
+  any_errors_fatal: false
+#
+#
+- name: Create a file if it does not exist
+  command: touch /home/ubuntu/myfile.txt
+  register: file_created
+  changed_when: file_created.rc == 0
+

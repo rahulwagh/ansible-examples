@@ -1,0 +1,4 @@
+---
+- name: Show vault variable value
+  debug:
+    var: my_secret_from_base64_pass_file
